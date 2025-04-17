@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS transactions;
+CREATE TABLE transactions (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    transaction_date DATETIME NOT NULL,
+    payment_method VARCHAR(50) NOT NULL,
+    total_amount DECIMAL(10,2) NOT NULL,
+    cash_received DECIMAL(10,2) NULL,
+    cash_change DECIMAL(10,2) NULL,
+    reference_number VARCHAR(4) NULL,
+    cart_items TEXT NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
